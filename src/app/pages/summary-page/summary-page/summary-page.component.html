@@ -1,0 +1,74 @@
+<div class="card text-center">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <h5 class="card-title">Welcome</h5>
+      <p class="card-text">
+        With supporting text below as a natural lead-in to additional content.
+      </p>
+      <a routerLink="/navigator" class="btn btn-primary">See transactions</a>
+    </div>
+    <div class="card-footer text-muted">
+      You have {{ users.length }} transactions
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ countType("income") }}</h5>
+          <p class="card-text">Income</p>
+          <a
+            routerLink="/navigator"
+            [queryParams]="{ tab: '0' }"
+            class="btn btn-primary btn-custom"
+            >See all</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ countType("investment") }}</h5>
+          <p class="card-text">Investments</p>
+          <a
+            routerLink="/navigator"
+            [queryParams]="{ tab: '3' }"
+            class="btn btn-primary btn-custom"
+            >See all</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ countType("outcome") }}</h5>
+          <p class="card-text">Outcome</p>
+          <a
+            routerLink="/navigator"
+            [queryParams]="{ tab: '1' }"
+            class="btn btn-primary btn-custom"
+            >See all</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ countType("loan") }}</h5>
+          <p class="card-text">Loans</p>
+          <a
+            routerLink="/navigator"
+            [queryParams]="{ tab: '2' }"
+            class="btn btn-primary btn-custom"
+            >See all</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  

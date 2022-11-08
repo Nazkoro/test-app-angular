@@ -1,0 +1,22 @@
+<list-navbar [tab]="tab"></list-navbar>
+<ng-container *ngIf="filteredUsers.length > 0; else empty">
+  <div class="d-flex justify-content-around">
+    <p>Name</p>
+    <p>Acount</p>
+  </div>
+  <display-list
+    *ngFor="let user of filteredUsers"
+    [user]="user"
+  ></display-list>
+</ng-container>
+
+<ng-template #empty>
+  <div class="empty">empty list</div>
+</ng-template>
+
+<div
+  *ngIf="loading"
+  class="container-loader d-flex justify-content-center align-items-center"
+>
+  <div class="loader"></div>
+</div>
